@@ -129,16 +129,6 @@ inquirer
             // Something else went wrong
         }
     }); 
-inquirer 
-    .prompt([
-        {
-            name: 'gmail',
-            message: 'what is your gmail'
-        }
-    ])
-    .then((answers) => {
-        console.log(answers);
-    })
 //node-schedule
 // import schedule from 'node-schedule'
 // // const schedule = require('node-schedule');
