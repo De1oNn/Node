@@ -50,7 +50,7 @@
 
 
 // figlet
-// var figlet = require("figlet");
+// import figlet from "figlet";
 
 // figlet("Hello World!!", function (err, data) {
 //   if (err) {
@@ -71,7 +71,7 @@
 // 	spinner.text = 'Loading rainbows';
 // }, 1000);
 
-//pokemon
+// pokemon
 // const pokemon = require('pokemon');
 
 // pokemon.all();
@@ -88,10 +88,7 @@
 
 
 //faker
-// import { faker } from '@faker-js/faker';
-
-// // CJS
-// const { faker } = require('@faker-js/faker');
+// import faker from '@faker-js/faker';
 
 // export function createRandomUser() {
 //   return {
@@ -108,26 +105,68 @@
 // export const users = faker.helpers.multiple(createRandomUser, {
 //   count: 5,
 // });
-// console.log(
-//     faker.helpers.fake(
-//       'Hello {{person.prefix}} {{person.lastName}}, how are you today?'
-//     )
-//   );
 
-//npm install inquirer
+
+// npm install inquirer
 // import inquirer from 'inquirer';
 
 // inquirer
-//   .prompt([
-//     /* Pass your questions in here */
-//   ])
-//   .then((answers) => {
-//     // Use user feedback for... whatever!!
-//   })
-//   .catch((error) => {
-//     if (error.isTtyError) {
-//       // Prompt couldn't be rendered in the current environment
-//     } else {
-//       // Something else went wrong
-//     }
-//   });
+//     .prompt([
+//         {
+//             name: 'name',
+//             message: 'what is your name?',
+//         }
+//     ])
+//     .then((answers) => {
+//         console.log(answers)
+//         // Use user feedback for... whatever!!
+//     })
+//     .catch((error) => {
+//         if (error.isTtyError) {
+//             // Prompt couldn't be rendered in the current environment
+//         } else {
+//             // Something else went wrong
+//         }
+//     });
+
+//node-schedule
+// import schedule from 'node-schedule'
+// // const schedule = require('node-schedule');
+
+// const job = schedule.scheduleJob('42 * * * *', function(){
+//   console.log('The answer to life, the universe, and everything!');
+// });
+
+
+// import player from 'play-sound'
+
+// //var player = require('play-sound')(opts = {})
+
+// // $ mplayer foo.mp3 
+// player.play('foo.mp3', function(err){
+//   if (err) throw err
+// })
+
+// // { timeout: 300 } will be passed to child process
+// player.play('foo.mp3', { timeout: 300 }, function(err){
+//   if (err) throw err
+// })
+
+// // configure arguments for executable if any
+// player.play('foo.mp3', { afplay: ['-v', 1 ] /* lower volume for afplay on OSX */ }, function(err){
+//   if (err) throw err
+// })
+
+// // access the node child_process in case you need to kill it on demand
+// var audio = player.play('foo.mp3', function(err){
+//   if (err && !err.killed) throw err
+// })
+// audio.kill()
+
+// import qr from 'qr-image'
+// // var qr = require('qr-image');
+ 
+// var qr_svg = qr.image('I love QR!', { type: 'svg' });
+// qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
+ 
+// var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
