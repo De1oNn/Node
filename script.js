@@ -108,27 +108,37 @@
 
 
 // npm install inquirer
-// import inquirer from 'inquirer';
+import { log } from 'console';
+import inquirer from 'inquirer';
 
-// inquirer
-//     .prompt([
-//         {
-//             name: 'name',
-//             message: 'what is your name?',
-//         }
-//     ])
-//     .then((answers) => {
-//         console.log(answers)
-//         // Use user feedback for... whatever!!
-//     })
-//     .catch((error) => {
-//         if (error.isTtyError) {
-//             // Prompt couldn't be rendered in the current environment
-//         } else {
-//             // Something else went wrong
-//         }
-//     });
-
+inquirer
+    .prompt([
+        {
+            name: 'name',
+            message: 'what is your name?',
+        }
+    ])
+    .then((answers) => {
+        console.log(answers)
+        // Use user feedback for... whatever!!
+    }) 
+    .catch((error) => {
+        if (error.isTtyError) {
+            // Prompt couldn't be rendered in the current environment
+        } else {
+            // Something else went wrong
+        }
+    }); 
+inquirer 
+    .prompt([
+        {
+            name: 'gmail',
+            message: 'what is your gmail'
+        }
+    ])
+    .then((answers) => {
+        console.log(answers);
+    })
 //node-schedule
 // import schedule from 'node-schedule'
 // // const schedule = require('node-schedule');
